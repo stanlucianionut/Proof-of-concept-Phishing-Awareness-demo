@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graduation Attendance Confirmation - Cybersecurity Bootcamp</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            padding: 40px 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header { 
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .form-group { 
+            margin: 25px 0; 
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        input[type="text"] { 
+            width: 100%; 
+            padding: 12px; 
+            border: 2px solid #e1e5e9; 
+            border-radius: 6px; 
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+        
+        button { 
+            background: var(--secondary-color); 
+            color: white; 
+            padding: 15px; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #7f8c8d;
+            text-align: center;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 20px;
+        }
+        
+        .security-notice {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Replace with your actual logo -->
+            <img src="bootcamp-logo.png" alt="Cybersecurity Bootcamp" class="logo">
+            <div class="badge">SECURE PORTAL</div>
+            <h1 style="color: var(--primary-color); margin: 10px 0;">Graduation Attendance Confirmation</h1>
+            <p style="color: #666; margin: 0;">Please confirm your attendance for the upcoming graduation ceremony</p>
+        </div>
+        
+        <form action="process.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name as registered" required>
+            </div>
+            
+            <button type="submit">
+                ✅ Confirm My Attendance
+            </button>
+        </form>
+
+        <div class="security-notice">
+            <strong>🔒 Secure Connection:</strong> This form is protected with SSL encryption. Your information is secure.
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Cybersecurity Bootcamp Administration. All rights reserved.</p>
+            <p>Student Portal System | Version 2.1.4 | <span id="current-date"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Add current date to footer
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
